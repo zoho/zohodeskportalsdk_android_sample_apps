@@ -2,11 +2,12 @@ package com.zoho.deskportalsdk.demo.stats.events;
 
 import android.app.Application;
 import android.util.Log;
-
 import com.zoho.desk.asap.api.ZohoDeskPortalSDK;
 import com.zoho.desk.asap.common.ZDPortalConfiguration;
-import com.zoho.desk.asap.common.utils.ZDPortalEventsCallback;
-import com.zoho.desk.asap.common.utils.ZDeskEvents;
+import com.zoho.desk.asap.common.utils.ZDPEvents;
+import com.zoho.desk.asap.common.utils.ZDPEventsCallback;
+import org.jetbrains.annotations.NotNull;
+import java.util.HashMap;
 
 
 public class MyApplication extends Application {
@@ -30,14 +31,14 @@ public class MyApplication extends Application {
         ZDPortalConfiguration.setEventsCallback(zohoDeskEventsCallback);
     }
 
-    private ZDPortalEventsCallback zohoDeskEventsCallback = new ZDPortalEventsCallback() {
+    private ZDPEventsCallback zohoDeskEventsCallback = new ZDPEventsCallback() {
         @Override
-        public void onDeskEvent(ZDeskEvents.ScreenName screenName, ZDeskEvents.Event event, ZDeskEvents.SourceOfTheEvent sourceOfTheEvent, ZDeskEvents.ActionName actionName, String s, String s1) {
-            if(actionName == ZDeskEvents.ActionName.KB_ARTICLE_CLICK) {
+        public void onEvent(@NotNull String eventName, @NotNull HashMap<String, String> eventData) {
+            if(eventName.equals(ZDPEvents.EventName.KB_ARTICLE_CLICK.getValue())) {
                 Log.i("EVENT","An Article is clicked.");
                 //An Article is clicked. You can Log or Push this to any of the Analytics tools.
-            } else if(actionName == ZDeskEvents.ActionName.COMMUNITY_TOPIC_LIST_CLICK) {
-                Log.i("EVENT","A Topic is clicked.");
+            } else if(eventName.equals(ZDPEvents.EventName.KB_ARTICLE_LIKE.getValue())) {
+                Log.i("EVENT","An Article is liked.");
                 //A topic is clicked. You can Log or Push this to any of the Analytics tools.
             }
         }
