@@ -7,10 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.zoho.desk.asap.livechat.ZDPortalLiveChat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import kotlin.Pair;
-import kotlin.TuplesKt;
-import kotlin.collections.CollectionsKt;
-import kotlin.collections.MapsKt;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,33 +27,69 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setGCSessionVariable(View view) {
-        ArrayList<HashMap<String, Object>> sessionVariables = CollectionsKt.arrayListOf(new HashMap[] {
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR VARIABLE NAME"), TuplesKt.to("value", "YOUR VARIABLE VALUE") }),
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR SECOND VARIABLE NAME"), TuplesKt.to("value", "YOUR SECOND VARIABLE VALUE") }) });
+        ArrayList<HashMap<String, Object>> sessionVariables = new ArrayList<>();
+
+        HashMap<String, Object> firstVariable = new HashMap<>();
+        firstVariable.put("name", "YOUR VARIABLE NAME");
+        firstVariable.put("value", "YOUR VARIABLE VALUE");
+
+        HashMap<String, Object> secondVariable = new HashMap<>();
+        secondVariable.put("name", "YOUR SECOND VARIABLE NAME");
+        secondVariable.put("value", "YOUR SECOND VARIABLE VALUE");
+
+        sessionVariables.add(firstVariable);
+        sessionVariables.add(secondVariable);
 
         ZDPortalLiveChat.setGCSessionVariable(this, sessionVariables);
     }
 
     public void updateGCSessionVariable(View view) {
-        ArrayList<HashMap<String, Object>> sessionVariables = CollectionsKt.arrayListOf(new HashMap[] {
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR VARIABLE NAME"), TuplesKt.to("value", "YOUR VARIABLE VALUE") }),
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR SECOND VARIABLE NAME"), TuplesKt.to("value", "YOUR SECOND VARIABLE VALUE") }) });
+        ArrayList<HashMap<String, Object>> sessionVariables = new ArrayList<>();
+
+        HashMap<String, Object> firstVariable = new HashMap<>();
+        firstVariable.put("name", "YOUR VARIABLE NAME");
+        firstVariable.put("value", "YOUR VARIABLE VALUE");
+
+        HashMap<String, Object> secondVariable = new HashMap<>();
+        secondVariable.put("name", "YOUR SECOND VARIABLE NAME");
+        secondVariable.put("value", "YOUR SECOND VARIABLE VALUE");
+
+        sessionVariables.add(firstVariable);
+        sessionVariables.add(secondVariable);
 
         ZDPortalLiveChat.updateGCSessionVariable(this, sessionVariables);
     }
 
     public void setBMSessionVariable(View view) {
-        ArrayList<HashMap<String, Object>> sessionVariables = CollectionsKt.arrayListOf(new HashMap[] {
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR VARIABLE NAME"), TuplesKt.to("value", "YOUR VARIABLE VALUE") }),
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR SECOND VARIABLE NAME"), TuplesKt.to("value", "YOUR SECOND VARIABLE VALUE") }) });
+        ArrayList<HashMap<String, Object>> sessionVariables = new ArrayList<>();
+
+        HashMap<String, Object> firstVariable = new HashMap<>();
+        firstVariable.put("name", "YOUR VARIABLE NAME");
+        firstVariable.put("value", "YOUR VARIABLE VALUE");
+
+        HashMap<String, Object> secondVariable = new HashMap<>();
+        secondVariable.put("name", "YOUR SECOND VARIABLE NAME");
+        secondVariable.put("value", "YOUR SECOND VARIABLE VALUE");
+
+        sessionVariables.add(firstVariable);
+        sessionVariables.add(secondVariable);
 
         ZDPortalLiveChat.setBMSessionVariable(this, sessionVariables);
     }
 
     public void updateBMSessionVariable(View view) {
-        ArrayList<HashMap<String, Object>> sessionVariables = CollectionsKt.arrayListOf(new HashMap[] {
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR VARIABLE NAME"), TuplesKt.to("value", "YOUR VARIABLE VALUE") }),
-                MapsKt.hashMapOf(new Pair[] { TuplesKt.to("name", "YOUR SECOND VARIABLE NAME"), TuplesKt.to("value", "YOUR SECOND VARIABLE VALUE") }) });
+        ArrayList<HashMap<String, Object>> sessionVariables = new ArrayList<>();
+
+        HashMap<String, Object> firstVariable = new HashMap<>();
+        firstVariable.put("name", "YOUR VARIABLE NAME");
+        firstVariable.put("value", "YOUR VARIABLE VALUE");
+
+        HashMap<String, Object> secondVariable = new HashMap<>();
+        secondVariable.put("name", "YOUR SECOND VARIABLE NAME");
+        secondVariable.put("value", "YOUR SECOND VARIABLE VALUE");
+
+        sessionVariables.add(firstVariable);
+        sessionVariables.add(secondVariable);
 
         ZDPortalLiveChat.updateBMSessionVariable(this, sessionVariables);
     }
