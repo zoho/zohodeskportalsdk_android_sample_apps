@@ -1,57 +1,50 @@
 package com.zoho.deskportalsdk.demo.chat_kit_sample
 
-import android.os.Bundle
-import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import com.zoho.desk.asap.livechat.ZDPortalLiveChat
 
-class MainActivity : AppCompatActivity() {
+class ChatSampleKotlin {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    fun showGC(activity: Activity) {
+        ZDPortalLiveChat.showGC(activity)
     }
-
-    fun showGC(view: View) {
-        ZDPortalLiveChat.showGC(this)
+    fun showAnswerBot(activity: Activity) {
+        ZDPortalLiveChat.showAnswerBot(activity)
     }
-    fun showAnswerBot(view: View) {
-        ZDPortalLiveChat.showAnswerBot(this)
-    }
-    fun showBM(view: View) {
-        ZDPortalLiveChat.showBusinessMessenger(this)
+    fun showBM(activity: Activity) {
+        ZDPortalLiveChat.showBusinessMessenger(activity)
     }
 
-    fun setGCSessionVariable(view: View) {
+    fun setGCSessionVariable(activity: Activity) {
         val sessionVariables = arrayListOf(
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.setGCSessionVariable(this, sessionVariables)
+        ZDPortalLiveChat.setGCSessionVariable(activity, sessionVariables)
     }
 
-    fun updateGCSessionVariable(view: View) {
+    fun updateGCSessionVariable(activity: Activity) {
         val sessionVariables = arrayListOf(
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.updateGCSessionVariable(this, sessionVariables)
+        ZDPortalLiveChat.updateGCSessionVariable(activity, sessionVariables)
     }
 
-    fun setBMSessionVariable(view: View) {
+    fun setBMSessionVariable(activity: Activity) {
         val sessionVariables = arrayListOf(
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.setBMSessionVariable(this, sessionVariables)
+        ZDPortalLiveChat.setBMSessionVariable(activity, sessionVariables)
     }
 
-    fun updateBMSessionVariable(view: View) {
+    fun updateBMSessionVariable(activity: Activity) {
         val sessionVariables = arrayListOf(
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.updateBMSessionVariable(this, sessionVariables)
+        ZDPortalLiveChat.updateBMSessionVariable(activity, sessionVariables)
     }
 
 }
