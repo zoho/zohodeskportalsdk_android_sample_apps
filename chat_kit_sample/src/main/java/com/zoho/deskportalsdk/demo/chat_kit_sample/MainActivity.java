@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.zoho.desk.asap.livechat.ZDPortalLiveChat;
+
+import com.zoho.desk.asap.chatkit.ZohoDeskPortalChatKit;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -17,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showGC(View view) {
-        ZDPortalLiveChat.showGC(this);
+        ZohoDeskPortalChatKit.showGC(this);
     }
     public void showAnswerBot(View view) {
-        ZDPortalLiveChat.showAnswerBot(this);
+        ZohoDeskPortalChatKit.showAnswerBot(this);
     }
     public void showBM(View view) {
-        ZDPortalLiveChat.showBusinessMessenger(this);
+        ZohoDeskPortalChatKit.showBM(this);
     }
 
     public void setGCSessionVariable(View view) {
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         sessionVariables.add(firstVariable);
         sessionVariables.add(secondVariable);
 
-        ZDPortalLiveChat.setGCSessionVariable(this, sessionVariables);
+        ZohoDeskPortalChatKit.setGCSessionVariable(this, sessionVariables);
     }
 
     public void updateGCSessionVariable(View view) {
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         sessionVariables.add(firstVariable);
         sessionVariables.add(secondVariable);
 
-        ZDPortalLiveChat.updateGCSessionVariable(this, sessionVariables);
+        ZohoDeskPortalChatKit.updateGCSessionVariable(this, sessionVariables);
     }
 
     public void setBMSessionVariable(View view) {
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         sessionVariables.add(firstVariable);
         sessionVariables.add(secondVariable);
 
-        ZDPortalLiveChat.setBMSessionVariable(this, sessionVariables);
+        ZohoDeskPortalChatKit.setBMSessionVariable(this, sessionVariables);
     }
 
     public void updateBMSessionVariable(View view) {
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         sessionVariables.add(firstVariable);
         sessionVariables.add(secondVariable);
 
-        ZDPortalLiveChat.updateBMSessionVariable(this, sessionVariables);
+        ZohoDeskPortalChatKit.updateBMSessionVariable(this, sessionVariables);
     }
 
 }

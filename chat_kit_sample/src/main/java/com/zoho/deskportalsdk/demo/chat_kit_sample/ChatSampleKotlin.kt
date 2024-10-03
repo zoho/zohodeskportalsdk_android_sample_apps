@@ -1,18 +1,18 @@
 package com.zoho.deskportalsdk.demo.chat_kit_sample
 
 import android.app.Activity
-import com.zoho.desk.asap.livechat.ZDPortalLiveChat
+import com.zoho.desk.asap.chatkit.ZohoDeskPortalChatKit
 
 class ChatSampleKotlin {
 
     fun showGC(activity: Activity) {
-        ZDPortalLiveChat.showGC(activity)
+        ZohoDeskPortalChatKit.showGC(activity)
     }
     fun showAnswerBot(activity: Activity) {
-        ZDPortalLiveChat.showAnswerBot(activity)
+        ZohoDeskPortalChatKit.showAnswerBot(activity)
     }
     fun showBM(activity: Activity) {
-        ZDPortalLiveChat.showBusinessMessenger(activity)
+        ZohoDeskPortalChatKit.showBM(activity)
     }
 
     fun setGCSessionVariable(activity: Activity) {
@@ -20,7 +20,7 @@ class ChatSampleKotlin {
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.setGCSessionVariable(activity, sessionVariables)
+        ZohoDeskPortalChatKit.setGCSessionVariable(activity, sessionVariables)
     }
 
     fun updateGCSessionVariable(activity: Activity) {
@@ -28,7 +28,7 @@ class ChatSampleKotlin {
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.updateGCSessionVariable(activity, sessionVariables)
+        ZohoDeskPortalChatKit.updateGCSessionVariable(activity, sessionVariables)
     }
 
     fun setBMSessionVariable(activity: Activity) {
@@ -36,7 +36,7 @@ class ChatSampleKotlin {
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.setBMSessionVariable(activity, sessionVariables)
+        ZohoDeskPortalChatKit.setBMSessionVariable(activity, sessionVariables)
     }
 
     fun updateBMSessionVariable(activity: Activity) {
@@ -44,7 +44,7 @@ class ChatSampleKotlin {
             hashMapOf<String, Any>("name" to "YOUR VARIABLE NAME", "value" to "YOUR VARIABLE VALUE"),
             hashMapOf<String, Any>("name" to "YOUR SECOND VARIABLE NAME", "value" to "YOUR VARIABLE VALUE")
         )
-        ZDPortalLiveChat.updateBMSessionVariable(activity, sessionVariables)
+        ZohoDeskPortalChatKit.updateBMSessionVariable(activity, sessionVariables)
     }
 
 }

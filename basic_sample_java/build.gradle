@@ -22,7 +22,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
-    implementation "com.zoho.desk:asapsdk:$zoho_desk_portal_version"
+    implementation "com.zoho.desk:asap:$zoho_desk_portal_version"
+    implementation "com.zoho.desk:asap-siq:$zoho_desk_portal_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

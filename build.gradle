@@ -20,7 +20,7 @@ allprojects {
     buildscript {
         ext {
             group_id = 'com.zoho.desk'
-            zoho_desk_portal_version = '4.0_BETA_01'
+            zoho_desk_portal_version = '4.0_BETA_02'
             min_sdk_version = 23
             target_sdk_version = 33
             compile_sdk_version = 33
